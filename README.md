@@ -1,4 +1,4 @@
-# bitrise-step-create-github-pull-request
+# Create Github Pull Request
 
 This step creates a pull request on GitHub using the provided branch names, title, body, and GitHub token.
 
