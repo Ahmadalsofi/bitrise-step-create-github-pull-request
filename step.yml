@@ -1,0 +1,77 @@
+title: |
+  Create GitHub Pull Request
+summary: |
+  Creates a pull request on GitHub with the specified details.
+description: |
+  This step creates a pull request on GitHub using the provided branch names, title, body, and GitHub token.
+website: https://github.com/Ahmadalsofi/bitrise-step-create-github-pull-request
+source_code_url: https://github.com/Ahmadalsofi/bitrise-step-create-github-pull-request
+support_url: https://github.com/Ahmadalsofi/bitrise-step-create-github-pull-request/issues
+
+type_tags:
+  - utility
+
+is_requires_admin_user: false
+is_always_run: false
+is_skippable: true
+run_if: ""
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - from_branch: ""
+    opts:
+      title: "From Branch"
+      summary: "Specify the source branch for the pull request."
+      description: "Enter the name of the source branch from which changes will be pulled."
+      is_expand: true
+      is_required: true
+      is_sensitive: false
+  - to_branch: ""
+    opts:
+      title: "To Branch"
+      summary: "Specify the target branch for the pull request."
+      description: "Enter the name of the target branch to which changes will be merged."
+      is_expand: true
+      is_required: true
+      is_sensitive: false
+  - pr_title: ""
+    opts:
+      title: "Pull Request Title"
+      summary: "Provide a title for the pull request."
+      description: "Enter a descriptive title for the pull request."
+      is_expand: true
+      is_required: true
+      is_sensitive: false
+  - pr_body: ""
+    opts:
+      title: "Pull Request Body"
+      summary: "Provide a description for the pull request."
+      description: "Enter a detailed description for the pull request."
+      is_expand: true
+      is_required: true
+      is_sensitive: false
+  - github_token: ""
+    opts:
+      title: "GitHub Token"
+      summary: "Provide the GitHub token for authentication."
+      description: "Enter the GitHub token used to authenticate the API request."
+      is_expand: true
+      is_required: true
+      is_sensitive: true
+  - repo_name: ""
+    opts:
+      title: "Repository Name"
+      summary: "Provide the name of the GitHub repository."
+      description: "Enter the name of the GitHub repository where the pull request will be created."
+      is_expand: true
+      is_required: true
+      is_sensitive: false
+
+outputs:
+- PR_HTML_URL:
+  opts:
+    title: "Pull Request URL"
+    summary: "URL of the created pull request."
