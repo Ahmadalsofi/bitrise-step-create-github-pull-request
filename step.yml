@@ -65,7 +65,7 @@ inputs:
     opts:
       title: "Repository Name"
       summary: "Provide the name of the GitHub repository."
-      description: "Enter the name of the GitHub repository where the pull request will be created."
+      description: "Enter the name of the GitHub repository where the pull request will be created. Make sure to include both the organization name and the repository name."
       is_expand: true
       is_required: true
       is_sensitive: false
